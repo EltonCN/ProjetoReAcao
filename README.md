@@ -11,6 +11,7 @@ The server can be found in the "Server" folder, and needs the [emonet](https://g
 The Unity project with the experiments is in the "ReAcao" folder, and contains two experiments with same scene name:
 
 - Colors: inspired by Bridget's paintings, the colors on the screen are changed to reflect the detected emotional state.
+  - [Video](https://youtu.be/mNwTotTj_ZM)
 - Interrogatory (under progress): it puts the player in the role of an accused in an interrogation, where their emotions can determine the outcome.
 
 ## Licensing
