@@ -1,0 +1,41 @@
+title: Start
+position: -157,27
+---
+<<declare $valence = 0 as number>>
+<<declare $arousal = 0 as number>>
+
+Um crime acaba de acontecer. Provas foram coletadas, e você, embora inocente, é indicado como principal suspeito.
+Você será incriminado?
+
+Juiz: Gostaria de lembrá-lo que qualquer reação poderá e será usada contra você
+
+<<jump Canivete>>
+===
+
+title: Canivete
+position: 156,26
+---
+Procurador: Um canivete feito a mão e bem trabalhado foi encontrado na cena do crime.
+Procurador: Você reconhece este canivete?
+
+<<raise StartTrack>>
+<<enable "[Image] Canivete">>
+<<wait 2>>
+<<raise EndTrack>>
+<<wait 1>>
+
+Debug: Valência: {$valence}  Arousal: {$arousal}
+
+-> Sim
+    <<if $valence > 0 and $arousal > 0>>
+        Procurador: Claro que reconhece! Posso ver pela sua cara.
+    <<else>>
+        Procurador: Está bem...
+    <<endif>>
+-> Não
+    <<if $valence > 0 and $arousal > 0>>
+        Procurador: Mentiroso! Posso ver pela sua cara.
+    <<else>>
+        Procurador: Está bem...
+    <<endif>>
+===
